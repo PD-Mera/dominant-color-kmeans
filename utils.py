@@ -34,9 +34,3 @@ def make_color_image(pixel, image_size = (256, 256)):
     color_image[:, :] = (b, g, r)
     return color_image
 
-
-if __name__ == '__main__':
-    get_list_pixel_rgb('/media/mera/Mera/AI/Selfcode/Dominant-Color-Kmeans/animefaces256cleaner_Filtered_Set0/000000.jpg')
-
-
-
