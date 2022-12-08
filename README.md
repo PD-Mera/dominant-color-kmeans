@@ -1,5 +1,7 @@
 # Find Dominant Color of an image using K-means
 
+This project simply using list of RGB pixels to clustering dominant colors using K-means
+
 ## Environments and Dependencies
 
 - Python 3.10.6
