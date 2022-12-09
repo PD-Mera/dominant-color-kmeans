@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-    name="Dominant-Color-Kmeans",
+    name="DominantColor",
     version="0.0.1",
     author="PD-Mera",
     author_email="phuongdong1772000@gmail.com",

@@ -10,8 +10,10 @@ def kmeans(X, n_clusters):
     if type(X) == list:
         X = np.array(X)
     
-    kmeans = KMeans(n_clusters=n_clusters).fit(X)
-    return kmeans.cluster_centers_.astype(int)
+    kmeans = KMeans(n_clusters=n_clusters, n_init=10).fit(X)
+    mydict = {i: len(np.where(kmeans.labels_ == i)[0]) for i in range(kmeans.n_clusters)}
+    value = np.fromiter(mydict.values(), dtype=int)
+    return kmeans.cluster_centers_.astype(int)[np.argsort(value)[::-1]]
 
 
 def get_dominant_color(inputs, n_clusters):
@@ -28,13 +30,13 @@ def get_dominant_color(inputs, n_clusters):
 
     list_color = get_list_pixel_rgb(inputs)
     results = kmeans(list_color, n_clusters)
-    color = [cv2.imread(image), ]
+    color = [image, ]
     for result in results:
         color.append(make_color_image(result))
     Horizontal_img = np.concatenate(color, axis=1)
     return Horizontal_img, color[1:]
     
     
-    
-    
+if __name__ == "__main__":
+    img, color = get_dominant_color('/media/mera/Mera/AI/Selfcode/Colorize-BW-Anime-Arts/data/images/000004.jpg', 5)
     
