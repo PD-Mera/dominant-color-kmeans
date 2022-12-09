@@ -26,11 +26,14 @@ def get_list_pixel_rgb(inputs):
     return list_pixel
 
 
-def make_color_image(pixel, image_size = (256, 256)):
+def make_color_image(pixel, image_size = (256, 256), mode = 'RGB'):
     r, g, b = pixel
     height = image_size[0]
     width = image_size[1]
     color_image = np.zeros((height, width ,3), np.uint8)
-    color_image[:, :] = (b, g, r)
+    if mode == 'BGR':
+        color_image[:, :] = (b, g, r)
+    else:
+        color_image[:, :] = (r, g, b)
     return color_image
 
