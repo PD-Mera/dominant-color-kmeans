@@ -38,5 +38,7 @@ def get_dominant_color(inputs, n_clusters):
     
     
 if __name__ == "__main__":
-    img, color = get_dominant_color('/media/mera/Mera/AI/Selfcode/Colorize-BW-Anime-Arts/data/images/000004.jpg', 5)
+    image_path = './data/images/000004.jpg'
+    number_cluster = 5
+    img, color = get_dominant_color(image_path, number_cluster)
     
