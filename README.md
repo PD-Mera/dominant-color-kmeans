@@ -15,10 +15,10 @@ pip install -r requirements.txt
 
 ## Run
 
-Simply modify inputs in `kmeans.py` and run 
+Simply modify inputs in `color_kmeans.py` and run 
 
 ``` bash
-python kmeans.py
+python color_kmeans.py
 ```
 
 ## Results
