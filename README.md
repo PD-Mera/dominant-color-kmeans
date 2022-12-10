@@ -6,14 +6,22 @@ This project simply using list of RGB pixels to clustering dominant colors using
 
 - Python 3.10.6
 
-Install dependencies
+Install
 
 ``` bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## Run
+## Install package
+
+``` bash
+git clone https://github.com/PD-Mera/Dominant-Color-Kmeans.git
+cd Dominant-Color-Kmeans
+pip install -e .
+```
+
+## Demo
 
 Simply modify inputs in `color_kmeans.py` and run 
 
