@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="DominantColor",
-    version="0.0.1",
+    version="0.0.2",
     author="PD-Mera",
     author_email="phuongdong1772000@gmail.com",
     description="Using K-means to get dominant colors of an image",
